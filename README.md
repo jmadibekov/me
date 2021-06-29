@@ -7,13 +7,13 @@
 
 ## Running Locally
 
-1. Clone the project
+1. Clone the project.
 
    ```sh
    git clone https://github.com/nurbakyt99/me.git
    ```
 
-2. Run the development server from the root of the repo
+2. Run the development server from the root of the repo.
 
    ```sh
    npm run dev
