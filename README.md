@@ -6,7 +6,7 @@
 </p>
 
 ## About
-This is my personal website, a little corner of mine in today's vast internet, if you will. Head over to [www.jubilant.tech](https://www.jubilant.tech) to check it out for yourself.
+This is my personal website; a little corner of mine in today's vast internet, if you will. Head over to [www.jubilant.tech](https://www.jubilant.tech) to check it out for yourself.
 
 ## Running Locally
 
@@ -16,7 +16,13 @@ This is my personal website, a little corner of mine in today's vast internet, i
    git clone https://github.com/nurbakyt99/me.git
    ```
 
-2. Run the development server from the root of the repo.
+2. Install the dependencies. 
+   ```sh
+   cd me/
+   npm install
+   ```
+
+3. Run the development server from the root of the repo.
 
    ```sh
    npm run dev
@@ -24,5 +30,5 @@ This is my personal website, a little corner of mine in today's vast internet, i
 
 ## Contributing
 
-Do feel free to raise an issue or contribute your own idea. I would be happy to hear your creative thoughts :)
+Do feel free to raise an issue or contribute your own idea. I would be happy to hear your creative thoughts.
 
