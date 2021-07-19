@@ -25,7 +25,7 @@ export default function Home({ allPostsData }) {
         </p>
 
         <p>
-          On a personal note, I love listening to jazz (I reckon you should
+          On a personal note, I love listening to jazz (and I reckon you should
           too)!
         </p>
       </section>

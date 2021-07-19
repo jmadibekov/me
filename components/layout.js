@@ -8,6 +8,27 @@ const name = "Joe Madibekov";
 export const siteTitle = "Home | Joe Madibekov";
 
 export default function Layout({ children, home }) {
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  function backgroundColor() {
+    switch (getRandomInt(4)) {
+      case 0:
+        return "#DBEAFE";
+      case 1:
+        return "#FEF3C7";
+      case 2:
+        return "D1FAE5";
+      case 3:
+        return "FCE7F3";
+      default:
+        console.log("Oops, this wasn't supposed to happen!");
+    }
+  }
+
+  console.log(`Background color is ${backgroundColor()}.`);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -43,6 +64,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
       <header className={styles.header}>
         {home ? (
           <>
@@ -78,7 +100,9 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
+
       <main>{children}</main>
+
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
@@ -86,6 +110,14 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+
+      {/* dynamic global styles */}
+      <style jsx global>{`
+        html,
+        body {
+          background: ${backgroundColor()};
+        }
+      `}</style>
     </div>
   );
 }
