@@ -16,17 +16,8 @@ export default function Home({ allPostsData }) {
 
         <p>
           I'm Joseph Rosotsky Madibekov, or just simply <b>Joe</b>. I am a
-          full-stack web developer that specializes in the backend.
-        </p>
-
-        <p>
-          I quite enjoy developing software that makes people smile. My current
-          technology stack consists of Next.js, Django, and FastAPI.
-        </p>
-
-        <p>
-          On a personal note, I love listening to jazz (and I reckon you should
-          too)!
+          junior student in Computer Science and a full-stack web developer that
+          specializes in the backend.
         </p>
       </section>
 

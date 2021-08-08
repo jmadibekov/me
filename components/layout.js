@@ -19,9 +19,9 @@ export default function Layout({ children, home }) {
       case 1:
         return "#FEF3C7";
       case 2:
-        return "D1FAE5";
+        return "#D1FAE5";
       case 3:
-        return "FCE7F3";
+        return "#FCE7F3";
       default:
         console.log("Oops, this wasn't supposed to happen!");
     }
@@ -112,7 +112,8 @@ export default function Layout({ children, home }) {
       )}
 
       {/* dynamic global styles */}
-      <style jsx global>{`
+      {/* TODO: this gives an annoying warning though */}
+      <style global jsx>{`
         html,
         body {
           background: ${backgroundColor()};
