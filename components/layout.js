@@ -1,17 +1,56 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "./layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
-const name = 'Joe Madibekov'
-export const siteTitle = 'Home | Joe Madibekov'
+const name = "Joe Madibekov";
+export const siteTitle = "Home | Joe Madibekov";
 
 export default function Layout({ children, home }) {
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  function backgroundColor() {
+    switch (getRandomInt(4)) {
+      case 0:
+        return "#DBEAFE";
+      case 1:
+        return "#FEF3C7";
+      case 2:
+        return "#D1FAE5";
+      case 3:
+        return "#FCE7F3";
+      default:
+        console.log("Oops, this wasn't supposed to happen!");
+    }
+  }
+
+  console.log(`Background color is ${backgroundColor()}.`);
+
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+
         <meta
           name="description"
           content="Welcome to the personal space of Joe Madibekov!"
@@ -25,6 +64,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
       <header className={styles.header}>
         {home ? (
           <>
@@ -60,7 +100,9 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
+
       <main>{children}</main>
+
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
@@ -68,6 +110,15 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+
+      {/* dynamic global styles */}
+      {/* TODO: this gives an annoying warning though */}
+      <style global jsx>{`
+        html,
+        body {
+          background: ${backgroundColor()};
+        }
+      `}</style>
     </div>
-  )
+  );
 }
