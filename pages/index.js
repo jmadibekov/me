@@ -15,11 +15,7 @@ export default function Home({ allPostsData }) {
         <p>Why, hello there, my curious guest! How kind of you to stop by.</p>
 
         <p>
-          I am Joseph Rosotsky Madibekov, or just simply <b>Joe</b>.
-        </p>
-
-        <p>
-          I am a junior student in Computer Science and a full-stack web
+          I am Joseph, a junior student in Computer Science and a full-stack web
           developer that specializes in the backend.
         </p>
       </section>
